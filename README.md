@@ -27,5 +27,4 @@ O Sistema de Gestão de Pedidos tem como objetivo simular o processo de criaçã
 | Abstração             | Classe Pagamento                 |
 | Herança               | PagamentoPix, PagamentoCartao, PagamentoBoleto     |
 | Polimorfismo          | Uso do tipo Pagamento            |
-| Interface             | (pode ser adicionada facilmente) |
 | Tratamento de exceção | try/catch no pagamento           |
