@@ -1,8 +1,6 @@
-import model.Cliente;
-import model.ItemPedido;
-import model.Pedido;
+import model.*;
 import pagamento.*;
-import service.SistemaPedidos;
+import service.*;
 
 public class main {
 
@@ -11,10 +9,13 @@ public class main {
         Cliente cliente = new Cliente("Laise Cavalcante", "laisesysprotec@gmail.com");
 
         Pedido pedido = new Pedido(cliente);
-        pedido.adicionarItem(new ItemPedido("Notebook", 2679.00, 1));
+        pedido.adicionarItem(new ItemPedido("Notebook", 2679.0, 1));
         pedido.adicionarItem(new ItemPedido("Mouse", 146.00, 2));
 
+        Pagamento pagamento = new PagamentoPix();
+
         SistemaPedidos sistema = new SistemaPedidos();
-        sistema.finalizarPedido(pedido, new PagamentoCartao());
+        sistema.finalizarPedido(pedido, pagamento);
     }
 }
+
