@@ -4,7 +4,7 @@ import service.*;
 
 public class main {
 
-    public static void main(String[] args) {
+    public static void Main(String[] args) {
 
         Cliente cliente = new Cliente("Laise Cavalcante", "laisesysprotec@gmail.com");
 
