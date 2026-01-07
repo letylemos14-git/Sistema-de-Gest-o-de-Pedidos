@@ -4,7 +4,7 @@ import model.Pedido;
 import pagamento.*;
 import service.SistemaPedidos;
 
-public class Main {
+public class main {
 
     public static void main(String[] args) {
 
@@ -14,9 +14,7 @@ public class Main {
         pedido.adicionarItem(new ItemPedido("Notebook", 2679.00, 1));
         pedido.adicionarItem(new ItemPedido("Mouse", 146.00, 2));
 
-        Pagamento pagamento = new PagamentoPix();
-
         SistemaPedidos sistema = new SistemaPedidos();
-        sistema.finalizarPedido(pedido, pagamento);
+        sistema.finalizarPedido(pedido, new PagamentoCartao());
     }
 }

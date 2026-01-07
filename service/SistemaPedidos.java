@@ -1,7 +1,9 @@
 package service;
 
+
 import model.Pedido;
 import pagamento.Pagamento;
+import model.ItemPedido;
 
 public class SistemaPedidos {
 
@@ -11,7 +13,19 @@ public class SistemaPedidos {
 
         try {
             if (pagamento.processarPagamento(total)) {
-                System.out.println("Pedido pago com sucesso!");
+                System.out.println("\nPedido pago com sucesso!\n");
+
+                for (ItemPedido item : pedido.getItens()) {
+                    System.out.println("Cliente: " + pedido.getCliente().getNome());
+                    System.out.println("Produto: " + item.getDescricao());
+                    System.out.println("Preço: R$ " + item.getPreco());
+                    System.out.println("Quantidade: " + item.getQuantidade());
+                    System.out.println("Subtotal: R$ " + item.getSubtotal());
+                    System.out.println("==================================\n");
+                }
+
+                System.out.println(pagamento.processarPagamento(total));
+
             } else {
                 throw new IllegalArgumentException("Pagamento recusado.");
             }

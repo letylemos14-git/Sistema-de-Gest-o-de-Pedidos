@@ -28,4 +28,10 @@ public class Pedido {
     public Cliente getCliente() {
         return cliente;
     }
+
+    public List<ItemPedido> getItens() {
+        return itens;
+    }
 }
+
+
