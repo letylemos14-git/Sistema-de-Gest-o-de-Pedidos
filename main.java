@@ -2,9 +2,9 @@ import model.*;
 import pagamento.*;
 import service.*;
 
-public class main {
+public class Main {
 
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
 
         Cliente cliente = new Cliente("Laise Cavalcante", "laisesysprotec@gmail.com");
 
